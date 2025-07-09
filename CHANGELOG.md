@@ -3382,6 +3382,7 @@ All notable changes to this project will be documented in this file.
 - *(constants)* Update version to include domain suffix
 - *(build)* Comment out aarch64 build steps and adjust dependencies
 - *(build)* Remove aarch64 image build step from production configuration
+- *(build)* Change Docker manifest creation command to use --append
 
 ### 💼 Other
 
@@ -4254,6 +4255,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(service)* Add new docs link for zipline (#5912)
+- Update changelog
 - Update changelog
 - Update changelog
 - Update changelog
