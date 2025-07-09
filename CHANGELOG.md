@@ -3378,6 +3378,7 @@ All notable changes to this project will be documented in this file.
 - *(versions)* Update coolify version numbers in versions.json and constants.php to 4.0.0-beta.420.5 and 4.0.0-beta.420.6
 - *(database)* Ensure internal port defaults correctly for unsupported database types in StartDatabaseProxy
 - *(build)* Update image name to reflect new repository ownership
+- *(build)* Remove Docker registry references from production build configuration
 
 ### 💼 Other
 
@@ -4250,6 +4251,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(service)* Add new docs link for zipline (#5912)
+- Update changelog
 - Update changelog
 - Update changelog
 - Update changelog
