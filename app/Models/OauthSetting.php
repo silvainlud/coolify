@@ -11,13 +11,13 @@ class OauthSetting extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['provider', 'client_id', 'client_secret', 'redirect_uri', 'tenant', 'base_url', 'enabled'];
+    protected $fillable = ['provider', 'client_id', 'client_secret', 'redirect_uri', 'tenant', 'base_url', 'enabled', 'realms'];
 
     protected function clientSecret(): Attribute
     {
         return Attribute::make(
-            get: fn (?string $value) => empty($value) ? null : Crypt::decryptString($value),
-            set: fn (?string $value) => empty($value) ? null : Crypt::encryptString($value),
+            get: fn(?string $value) => empty($value) ? null : Crypt::decryptString($value),
+            set: fn(?string $value) => empty($value) ? null : Crypt::encryptString($value),
         );
     }
 
@@ -29,6 +29,8 @@ class OauthSetting extends Model
             case 'authentik':
             case 'clerk':
                 return filled($this->client_id) && filled($this->client_secret) && filled($this->base_url);
+            case 'keycloak':
+                return filled($this->client_id) && filled($this->client_secret) && filled($this->base_url) && filled($this->realms);
             default:
                 return filled($this->client_id) && filled($this->client_secret);
         }
