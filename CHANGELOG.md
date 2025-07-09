@@ -3379,6 +3379,8 @@ All notable changes to this project will be documented in this file.
 - *(database)* Ensure internal port defaults correctly for unsupported database types in StartDatabaseProxy
 - *(build)* Update image name to reflect new repository ownership
 - *(build)* Remove Docker registry references from production build configuration
+- *(constants)* Update version to include domain suffix
+- *(build)* Comment out aarch64 build steps and adjust dependencies
 
 ### 💼 Other
 
@@ -4251,6 +4253,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(service)* Add new docs link for zipline (#5912)
+- Update changelog
 - Update changelog
 - Update changelog
 - Update changelog
