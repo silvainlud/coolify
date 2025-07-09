@@ -45,6 +45,7 @@ jobs:
           push: true
           tags: |
             ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }}
+            ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
 #  aarch64:
 #    runs-on: [self-hosted, arm64]
