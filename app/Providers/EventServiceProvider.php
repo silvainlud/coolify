@@ -13,6 +13,7 @@ use SocialiteProviders\Clerk\ClerkExtendSocialite;
 use SocialiteProviders\Discord\DiscordExtendSocialite;
 use SocialiteProviders\Google\GoogleExtendSocialite;
 use SocialiteProviders\Infomaniak\InfomaniakExtendSocialite;
+use SocialiteProviders\Keycloak\KeycloakExtendSocialite;
 use SocialiteProviders\Manager\SocialiteWasCalled;
 use SocialiteProviders\Zitadel\ZitadelExtendSocialite;
 
@@ -33,6 +34,7 @@ class EventServiceProvider extends ServiceProvider
             GoogleExtendSocialite::class.'@handle',
             InfomaniakExtendSocialite::class.'@handle',
             ZitadelExtendSocialite::class.'@handle',
+            KeycloakExtendSocialite::class.'@handle',
         ],
     ];
 

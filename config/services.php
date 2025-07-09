@@ -46,6 +46,13 @@ return [
         'redirect' => env('AUTHENTIK_REDIRECT_URI'),
     ],
 
+    'keycloak' => [
+        'base_url' => env('KEYCLOAK_BASE_URL'),
+        'client_id' => env('KEYCLOAK_CLIENT_ID'),
+        'client_secret' => env('KEYCLOAK_CLIENT_SECRET'),
+        'redirect' => env('KEYCLOAK_REDIRECT_URI'),
+    ],
+
     'clerk' => [
         'client_id' => env('CLERK_CLIENT_ID'),
         'client_secret' => env('CLERK_CLIENT_SECRET'),

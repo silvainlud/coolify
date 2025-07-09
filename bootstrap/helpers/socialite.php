@@ -7,7 +7,7 @@ function get_socialite_provider(string $provider)
 {
     $oauth_setting = OauthSetting::firstWhere('provider', $provider);
 
-    if (! filled($oauth_setting->redirect_uri)) {
+    if (!filled($oauth_setting->redirect_uri)) {
         $oauth_setting->update(['redirect_uri' => route('auth.callback', $provider)]);
     }
 
@@ -44,6 +44,27 @@ function get_socialite_provider(string $provider)
         return Socialite::driver('zitadel')->setConfig($zitadel_config);
     }
 
+    if ($provider == 'keycloak') {
+//        $tmpConfig = [
+//            'client_id' => $oauth_setting->client_id,
+//            'client_secret' => $oauth_setting->client_secret,
+//            'redirect' => $oauth_setting->redirect_uri,
+//        ];
+//        Socialite::extend('keycloak', function () use($tmpConfig) {
+//
+//            return Socialite::buildProvider(\SocialiteProviders\Keycloak\Provider::class, $tmpConfig);
+//        });
+
+        $keycloak_config = new \SocialiteProviders\Manager\Config(
+            $oauth_setting->client_id,
+            $oauth_setting->client_secret,
+            $oauth_setting->redirect_uri,
+            ['base_url' => $oauth_setting->base_url,
+                'realms' => $oauth_setting->realms],
+        );
+        return Socialite::driver('keycloak')->setConfig($keycloak_config);
+    }
+
     if ($provider == 'google') {
         $google_config = new \SocialiteProviders\Manager\Config(
             $oauth_setting->client_id,
@@ -68,6 +89,7 @@ function get_socialite_provider(string $provider)
         'github' => \Laravel\Socialite\Two\GithubProvider::class,
         'gitlab' => \Laravel\Socialite\Two\GitlabProvider::class,
         'infomaniak' => \SocialiteProviders\Infomaniak\Provider::class,
+        'keycloak' => \SocialiteProviders\Keycloak\Provider::class,
     ];
 
     return Socialite::buildProvider(
