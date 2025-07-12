@@ -3387,6 +3387,7 @@ All notable changes to this project will be documented in this file.
 - *(build)* Add missing backslash for Docker manifest creation command
 - Update repository references from coollabsio to silvainlud
 - Update coolify version references to include silvain.eu
+- Update CDN URL to point to silvainlud repository
 
 ### 💼 Other
 
@@ -4259,6 +4260,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(service)* Add new docs link for zipline (#5912)
+- Update changelog
 - Update changelog
 - Update changelog
 - Update changelog
