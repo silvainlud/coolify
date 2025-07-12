@@ -2,7 +2,7 @@
 ## Do not modify this file. You will lose the ability to autoupdate!
 
 VERSION="15"
-CDN="https://cdn.coollabs.io/coolify"
+CDN="https://raw.githubusercontent.com/silvainlud/coolify/refs/heads/v4.x"
 LATEST_IMAGE=${1:-latest}
 LATEST_HELPER_VERSION=${2:-latest}
 REGISTRY_URL=${3:-ghcr.io}

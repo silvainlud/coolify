@@ -98,7 +98,7 @@ class Select extends Component
                 'name' => str($key)->headline(),
                 'logo' => asset($logo),
                 'logo_github_url' => file_exists($local_logo_path)
-                    ? 'https://raw.githubusercontent.com/coollabsio/coolify/refs/heads/main/public/'.$logo
+                    ? 'https://raw.githubusercontent.com/silvainlud/coolify/refs/heads/main/public/'.$logo
                     : asset($default_logo),
             ] + (array) $service;
         })->all();

@@ -2,7 +2,7 @@
 
 return [
     'coolify' => [
-        'version' => '4.0.0-beta.420.5-silvain.eu',
+        'version' => '4.0.0-beta-silvain.eu.420.5',
         'helper_version' => '1.0.8',
         'realtime_version' => '1.0.9',
         'self_hosted' => env('SELF_HOSTED', true),
@@ -22,7 +22,7 @@ return [
     'services' => [
         // Temporary disabled until cache is implemented
         // 'official' => 'https://cdn.coollabs.io/coolify/service-templates.json',
-        'official' => 'https://raw.githubusercontent.com/coollabsio/coolify/main/templates/service-templates.json',
+        'official' => 'https://raw.githubusercontent.com/silvainlud/coolify/main/templates/service-templates.json',
     ],
 
     'terminal' => [
