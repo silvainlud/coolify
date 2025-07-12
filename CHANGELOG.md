@@ -3385,6 +3385,7 @@ All notable changes to this project will be documented in this file.
 - *(build)* Change Docker manifest creation command to use --append
 - *(build)* Add missing backslash for Docker manifest creation command
 - *(build)* Add missing backslash for Docker manifest creation command
+- Update repository references from coollabsio to silvainlud
 
 ### 💼 Other
 
@@ -4257,6 +4258,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(service)* Add new docs link for zipline (#5912)
+- Update changelog
 - Update changelog
 - Update changelog
 - Update changelog
